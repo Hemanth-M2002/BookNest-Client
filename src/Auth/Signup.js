@@ -78,7 +78,7 @@ function Signup() {
       const books = await fetchBooks();
 
       // Send data to backend
-      await axios.post("https://booknest-server-kju1.onrender.com/api/signup", {
+      await axios.post("https://booknest-server-1.onrender.com/api/signup", {
         name,
         email,
         age,

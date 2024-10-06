@@ -50,7 +50,7 @@ function Dash() {
         }
 
         const response = await axios.get(
-          `https://booknest-server-kju1.onrender.com/api/users/${email}`
+          `https://booknest-server-1.onrender.com/api/users/${email}`
         );
         if (response.data) {
           setUser(response.data);

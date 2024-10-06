@@ -29,7 +29,7 @@ const BookDetails = () => {
         if (isAddedPath) {
           const email = localStorage.getItem("book-nest");
           const userResponse = await axios.get(
-            `https://booknest-server-kju1.onrender.com/api/users/${email}`
+            `https://booknest-server-1.onrender.com/api/users/${email}`
           );
           const user = userResponse.data;
 
@@ -84,7 +84,7 @@ const BookDetails = () => {
   const handleDelete = async () => {
     try {
       const email = localStorage.getItem("book-nest");
-      await axios.delete("https://booknest-server-kju1.onrender.com/api/delete-book", {
+      await axios.delete("https://booknest-server-1.onrender.com/api/delete-book", {
         data: { email, isbn13 },
       });
 
@@ -110,8 +110,8 @@ const BookDetails = () => {
     try {
       const email = localStorage.getItem("book-nest");
       const url = isAddedPath
-        ? "https://booknest-server-kju1.onrender.com/api/added-update"
-        : "https://booknest-server-kju1.onrender.com/api/update-book";
+        ? "https://booknest-server-1.onrender.com/api/added-update"
+        : "https://booknest-server-1.onrender.com/api/update-book";
 
       await axios.put(url, {
         email,
